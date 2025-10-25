@@ -1,0 +1,63 @@
+Contact: security@clinsights.dev
+Expires: 2026-10-25T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://clinsights.dev/.well-known/security.txt
+
+# Security Policy
+
+This file contains security contact information and vulnerability disclosure policy.
+
+## Reporting Security Vulnerabilities
+
+If you discover a security vulnerability in AI Insights Hub, please report it responsibly by:
+
+1. **Email:** security@clinsights.dev
+2. **Do NOT:** Create public GitHub issues for security vulnerabilities
+3. **Include:** 
+   - Description of the vulnerability
+   - Steps to reproduce
+   - Potential impact
+   - Your contact information
+
+## Response Timeline
+
+- **Initial Response:** Within 24 hours
+- **Assessment:** Within 48 hours
+- **Fix Development:** Depends on severity
+- **Public Disclosure:** After fix is released (coordinated disclosure)
+
+## Security Practices
+
+This application implements:
+- OAuth 2.0 authentication
+- Role-based access control (RBAC)
+- SQL injection prevention (parameterized queries)
+- XSS protection (React + Content Security Policy)
+- CSRF protection (SameSite cookies)
+- Rate limiting (100 requests per 15 minutes)
+- Security headers (Helmet.js)
+- HTTPS enforcement
+- Input validation (Zod schemas)
+- Secure session management (JWT)
+
+## Supported Versions
+
+| Version | Status | Security Updates |
+|---------|--------|------------------|
+| 1.x     | Current | Yes |
+| 0.x     | Legacy | No |
+
+## Known Issues
+
+None currently known. Please report any security issues responsibly.
+
+## Additional Resources
+
+- Security Audit: See SECURITY_AUDIT.md in repository
+- Deployment Guide: See DEPLOYMENT.md in repository
+- GitHub: https://github.com/lelandsequel/clinsights
+
+---
+
+Last Updated: October 25, 2025
+

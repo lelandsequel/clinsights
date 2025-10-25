@@ -4,6 +4,8 @@ import { createServer } from "http";
 import net from "net";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
+import cors from "cors";
+import morgan from "morgan";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
 import { registerOAuthRoutes } from "./oauth";
 import { appRouter } from "../routers";
@@ -33,8 +35,47 @@ async function startServer() {
   const app = express();
   const server = createServer(app);
 
-  // Security middleware
-  app.use(helmet());
+  // Request logging for monitoring and security
+  const morganFormat = process.env.NODE_ENV === "production" ? "combined" : "dev";
+  app.use(morgan(morganFormat));
+
+  // Security middleware with Content Security Policy
+  app.use(
+    helmet({
+      contentSecurityPolicy: {
+        directives: {
+          defaultSrc: ["'self'"],
+          scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"], // Vite dev server needs unsafe-eval
+          styleSrc: ["'self'", "'unsafe-inline'"],
+          imgSrc: ["'self'", "data:", "https:"],
+          fontSrc: ["'self'", "data:"],
+          connectSrc: ["'self'", "https://api.manus.im", "https://login.manus.im"],
+          frameSrc: ["'none'"],
+          objectSrc: ["'none'"],
+          upgradeInsecureRequests: process.env.NODE_ENV === "production" ? [] : undefined,
+        },
+      },
+      hsts: {
+        maxAge: 31536000, // 1 year
+        includeSubDomains: true,
+        preload: true,
+      },
+      referrerPolicy: { policy: "strict-origin-when-cross-origin" },
+      noSniff: true,
+      xssFilter: true,
+      frameguard: { action: "deny" },
+    })
+  );
+
+  // CORS configuration
+  const corsOptions = {
+    origin: process.env.ALLOWED_ORIGINS?.split(",") || ["http://localhost:3000", "http://localhost:5173"],
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    maxAge: 86400, // 24 hours
+  };
+  app.use(cors(corsOptions));
 
   // Rate limiting
   const limiter = rateLimit({
@@ -48,9 +89,10 @@ async function startServer() {
   // Apply rate limiting to API routes
   app.use("/api/", limiter);
 
-  // Configure body parser with larger size limit for file uploads
-  app.use(express.json({ limit: "50mb" }));
-  app.use(express.urlencoded({ limit: "50mb", extended: true }));
+  // Configure body parser with reasonable size limits
+  // Reduced from 50MB to 10MB to prevent DoS attacks
+  app.use(express.json({ limit: "10mb" }));
+  app.use(express.urlencoded({ limit: "10mb", extended: true }));
   // OAuth callback under /api/oauth/callback
   registerOAuthRoutes(app);
   // tRPC API
