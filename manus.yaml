@@ -1,0 +1,29 @@
+name: ai-insights-hub
+version: 1.0.0
+
+# Build configuration
+build:
+  command: pnpm install && pnpm build
+  output: dist
+
+# Runtime configuration
+runtime:
+  node_version: "22"
+  start_command: node dist/index.js
+
+# Environment variables (set these in Manus dashboard)
+env:
+  NODE_ENV: production
+  PORT: 3000
+
+# Health check
+health_check:
+  path: /
+  interval: 30
+  timeout: 10
+
+# Resources
+resources:
+  memory: 512M
+  cpu: 0.5
+

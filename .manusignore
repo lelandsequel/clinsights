@@ -1,0 +1,14 @@
+# Files to ignore during Manus deployment
+node_modules/
+.git/
+.DS_Store
+*.log
+.env
+.env.local
+.vscode/
+.idea/
+*.test.ts
+*.spec.ts
+coverage/
+.manus/
+
