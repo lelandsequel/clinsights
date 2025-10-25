@@ -1,0 +1,40 @@
+{
+  "query": "SELECT id, title, url, source FROM articles ORDER BY publishedAt DESC LIMIT 5",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2gwSzaetZSVyz5m.7cb6f6dbab6e --database CD3o5p4RnUDxASRCQAN4H5 --execute SELECT id, title, url, source FROM articles ORDER BY publishedAt DESC LIMIT 5",
+  "rows": [
+    {
+      "id": "11",
+      "title": "OpenAI Announces GPT-5 with Revolutionary Reasoning Capabilities",
+      "url": "https://openai.com/blog/gpt-5-announcement",
+      "source": "OpenAI"
+    },
+    {
+      "id": "17",
+      "title": "Meta Releases Open-Source Llama 3 with 405B Parameters",
+      "url": "https://ai.meta.com/llama",
+      "source": "Meta AI"
+    },
+    {
+      "id": "20",
+      "title": "OpenAI Partners with Apple to Integrate ChatGPT into iOS 18",
+      "url": "https://www.apple.com/newsroom/chatgpt-partnership",
+      "source": "Apple"
+    },
+    {
+      "id": "12",
+      "title": "Google DeepMind Achieves Breakthrough in Protein Folding with AlphaFold 3",
+      "url": "https://deepmind.google/research/alphafold-3",
+      "source": "Google DeepMind"
+    },
+    {
+      "id": "19",
+      "title": "New Study Shows AI Can Detect Early-Stage Cancer with 95% Accuracy",
+      "url": "https://www.nature.com/articles/ai-cancer-detection",
+      "source": "Nature"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\turl\tsource\n11\tOpenAI Announces GPT-5 with Revolutionary Reasoning Capabilities\thttps://openai.com/blog/gpt-5-announcement\tOpenAI\n17\tMeta Releases Open-Source Llama 3 with 405B Parameters\thttps://ai.meta.com/llama\tMeta AI\n20\tOpenAI Partners with Apple to Integrate ChatGPT into iOS 18\thttps://www.apple.com/newsroom/chatgpt-partnership\tApple\n12\tGoogle DeepMind Achieves Breakthrough in Protein Folding with AlphaFold 3\thttps://deepmind.google/research/alphafold-3\tGoogle DeepMind\n19\tNew Study Shows AI Can Detect Early-Stage Cancer with 95% Accuracy\thttps://www.nature.com/articles/ai-cancer-detection\tNature\n",
+  "stderr": "",
+  "execution_time_ms": 48
+}

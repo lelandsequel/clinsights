@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1761363551927,
+      "tag": "0000_mighty_impossible_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1761363583525,
+      "tag": "0001_futuristic_sway",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1761365490916,
+      "tag": "0002_regular_vulcan",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1761365924584,
+      "tag": "0003_bizarre_caretaker",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1761368314947,
+      "tag": "0004_panoramic_triathlon",
+      "breakpoints": true
+    }
+  ]
+}

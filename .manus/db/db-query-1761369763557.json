@@ -1,0 +1,35 @@
+{
+  "query": "SELECT id, title, industries FROM articles LIMIT 5",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2gwSzaetZSVyz5m.7cb6f6dbab6e --database CD3o5p4RnUDxASRCQAN4H5 --execute SELECT id, title, industries FROM articles LIMIT 5",
+  "rows": [
+    {
+      "id": "1",
+      "title": "OpenAI's Sora Loses Its Top App Store Ranking to Dave's Hot Chicken",
+      "industries": "NULL"
+    },
+    {
+      "id": "2",
+      "title": "How Data Centers Actually Work",
+      "industries": "NULL"
+    },
+    {
+      "id": "3",
+      "title": "The Man Who Makes AI Slop by Hand",
+      "industries": "NULL"
+    },
+    {
+      "id": "4",
+      "title": "ChatGPT’s Horny Era Could Be Its Stickiest Yet",
+      "industries": "NULL"
+    },
+    {
+      "id": "5",
+      "title": "AI Models Get Brain Rot, Too",
+      "industries": "NULL"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\tindustries\n1\tOpenAI's Sora Loses Its Top App Store Ranking to Dave's Hot Chicken\tNULL\n2\tHow Data Centers Actually Work\tNULL\n3\tThe Man Who Makes AI Slop by Hand\tNULL\n4\tChatGPT’s Horny Era Could Be Its Stickiest Yet\tNULL\n5\tAI Models Get Brain Rot, Too\tNULL\n",
+  "stderr": "",
+  "execution_time_ms": 114
+}

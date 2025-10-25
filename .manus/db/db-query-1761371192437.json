@@ -1,0 +1,70 @@
+{
+  "query": "SELECT id, title, url, source FROM articles LIMIT 10",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2gwSzaetZSVyz5m.7cb6f6dbab6e --database CD3o5p4RnUDxASRCQAN4H5 --execute SELECT id, title, url, source FROM articles LIMIT 10",
+  "rows": [
+    {
+      "id": "1",
+      "title": "OpenAI's Sora Loses Its Top App Store Ranking to Dave's Hot Chicken",
+      "url": "https://www.wired.com/story/sora-app-store-daves-hot-chicken/",
+      "source": "Wired"
+    },
+    {
+      "id": "2",
+      "title": "How Data Centers Actually Work",
+      "url": "https://www.wired.com/story/uncanny-valley-podcast-how-data-centers-actually-work/",
+      "source": "Wired"
+    },
+    {
+      "id": "3",
+      "title": "The Man Who Makes AI Slop by Hand",
+      "url": "https://www.wired.com/story/made-in-china-the-chinese-creator-who-imitates-ai-slop/",
+      "source": "Wired"
+    },
+    {
+      "id": "4",
+      "title": "ChatGPT’s Horny Era Could Be Its Stickiest Yet",
+      "url": "https://www.wired.com/story/chatgpt-horny-era/",
+      "source": "Wired"
+    },
+    {
+      "id": "5",
+      "title": "AI Models Get Brain Rot, Too",
+      "url": "https://www.wired.com/story/ai-models-social-media-cognitive-decline-study/",
+      "source": "Wired"
+    },
+    {
+      "id": "6",
+      "title": "This Open Source Robot Brain Thinks in 3D",
+      "url": "https://www.wired.com/story/this-open-source-robot-brain-thinks-in-3d/",
+      "source": "Wired"
+    },
+    {
+      "id": "7",
+      "title": "People Who Say They’re Experiencing AI Psychosis Beg the FTC for Help",
+      "url": "https://www.wired.com/story/ftc-complaints-chatgpt-ai-psychosis/",
+      "source": "Wired"
+    },
+    {
+      "id": "8",
+      "title": "OpenAI’s Atlas Browser Takes Direct Aim at Google Chrome",
+      "url": "https://www.wired.com/story/openai-atlas-browser-chrome-agents-web-browsing/",
+      "source": "Wired"
+    },
+    {
+      "id": "9",
+      "title": "Forget SEO. Welcome to the World of Generative Engine Optimization",
+      "url": "https://www.wired.com/story/goodbye-seo-hello-geo-brandlight-openai/",
+      "source": "Wired"
+    },
+    {
+      "id": "10",
+      "title": "The FTC Is Disappearing Blog Posts About AI Published During Lina Khan’s Tenure",
+      "url": "https://www.wired.com/story/ftc-removes-blog-posts-about-ai-authored-by-by-lina-khan/",
+      "source": "Wired"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\ttitle\turl\tsource\n1\tOpenAI's Sora Loses Its Top App Store Ranking to Dave's Hot Chicken\thttps://www.wired.com/story/sora-app-store-daves-hot-chicken/\tWired\n2\tHow Data Centers Actually Work\thttps://www.wired.com/story/uncanny-valley-podcast-how-data-centers-actually-work/\tWired\n3\tThe Man Who Makes AI Slop by Hand\thttps://www.wired.com/story/made-in-china-the-chinese-creator-who-imitates-ai-slop/\tWired\n4\tChatGPT’s Horny Era Could Be Its Stickiest Yet\thttps://www.wired.com/story/chatgpt-horny-era/\tWired\n5\tAI Models Get Brain Rot, Too\thttps://www.wired.com/story/ai-models-social-media-cognitive-decline-study/\tWired\n6\tThis Open Source Robot Brain Thinks in 3D\thttps://www.wired.com/story/this-open-source-robot-brain-thinks-in-3d/\tWired\n7\tPeople Who Say They’re Experiencing AI Psychosis Beg the FTC for Help\thttps://www.wired.com/story/ftc-complaints-chatgpt-ai-psychosis/\tWired\n8\tOpenAI’s Atlas Browser Takes Direct Aim at Google Chrome\thttps://www.wired.com/story/openai-atlas-browser-chrome-agents-web-browsing/\tWired\n9\tForget SEO. Welcome to the World of Generative Engine Optimization\thttps://www.wired.com/story/goodbye-seo-hello-geo-brandlight-openai/\tWired\n10\tThe FTC Is Disappearing Blog Posts About AI Published During Lina Khan’s Tenure\thttps://www.wired.com/story/ftc-removes-blog-posts-about-ai-authored-by-by-lina-khan/\tWired\n",
+  "stderr": "",
+  "execution_time_ms": 45
+}

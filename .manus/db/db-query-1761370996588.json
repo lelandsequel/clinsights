@@ -1,0 +1,16 @@
+{
+  "query": "SELECT \n  COUNT(*) as total_articles,\n  COUNT(DISTINCT source) as unique_sources,\n  AVG(relevanceScore) as avg_score,\n  COUNT(CASE WHEN industries IS NOT NULL AND industries != 'null' THEN 1 END) as articles_with_industries\nFROM articles",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2gwSzaetZSVyz5m.7cb6f6dbab6e --database CD3o5p4RnUDxASRCQAN4H5 --execute SELECT \n  COUNT(*) as total_articles,\n  COUNT(DISTINCT source) as unique_sources,\n  AVG(relevanceScore) as avg_score,\n  COUNT(CASE WHEN industries IS NOT NULL AND industries != 'null' THEN 1 END) as articles_with_industries\nFROM articles",
+  "rows": [
+    {
+      "total_articles": "115",
+      "unique_sources": "13",
+      "avg_score": "81.8000",
+      "articles_with_industries": "115"
+    }
+  ],
+  "messages": [],
+  "stdout": "total_articles\tunique_sources\tavg_score\tarticles_with_industries\n115\t13\t81.8000\t115\n",
+  "stderr": "",
+  "execution_time_ms": 46
+}
